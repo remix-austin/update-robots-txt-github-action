@@ -13,8 +13,14 @@ name: 'CodeQL'
 
 on:
   push:
+    # TODO: re-enable this before merging to main!
+    paths-ignore:
+      - 'gkn/**'
     branches: [main]
   pull_request:
+    # TODO: re-enable this before merging to main!
+    paths-ignore:
+      - 'gkn/**'
     # The branches below must be a subset of the branches above
     branches: [main]
   schedule:

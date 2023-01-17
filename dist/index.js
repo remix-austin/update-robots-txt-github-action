@@ -38,12 +38,9 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 const core = __importStar(__nccwpck_require__(2186));
-const github_1 = __importDefault(__nccwpck_require__(5438));
+const github = __importStar(__nccwpck_require__(5438));
 // import {wait} from './wait'
 function run() {
     return __awaiter(this, void 0, void 0, function* () {
@@ -53,7 +50,7 @@ function run() {
             // debug is only output if you set the secret `ACTIONS_STEP_DEBUG` to true
             core.info(`"🤖 robots-txt:"\n${robotsTxt}\n\n`);
             core.info(`"📂 file-path:"\n${filePath}\n\n`);
-            const payload = JSON.stringify(github_1.default.context.payload, undefined, 2);
+            const payload = JSON.stringify(github.context.payload, undefined, 2);
             core.info(`📦 github.context.payload: ${payload}`);
         }
         catch (error) {
