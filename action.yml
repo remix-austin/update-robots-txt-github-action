@@ -2,10 +2,14 @@ name: 'Update robots.txt GitHub Action'
 description: 'A custom GitHub Action for updating robots.txt'
 author: 'Grant Norwood'
 inputs:
-  milliseconds: # change this
+  robots-txt:
     required: true
-    description: 'input description here'
-    default: 'default value if applicable'
+    description: 'The content of the robots.txt file you want to use for a deployment.'
+    default: ''
+  file-path:
+    required: true
+    description: 'The destination path for saving the robots.txt file.'
+    default: './'
 runs:
   using: 'node16'
   main: 'dist/index.js'
