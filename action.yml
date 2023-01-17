@@ -1,6 +1,6 @@
-name: 'Your name here'
-description: 'Provide a description here'
-author: 'Your name or organization here'
+name: 'Update robots.txt GitHub Action'
+description: 'A custom GitHub Action for updating robots.txt'
+author: 'Grant Norwood'
 inputs:
   milliseconds: # change this
     required: true
